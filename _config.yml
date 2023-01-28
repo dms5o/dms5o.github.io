@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "it's 노트"
+title                    : "it's 노트 : 내 개발의 모든 것:)"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "오이"
-description              : "내 개발의 모든 것"
+name                     : "오잇"
+description              : "개발 클라우드입니다."
 url                      : "https://dms5o.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/dms5o/dms5o.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -30,9 +30,9 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "dms5o-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -104,8 +104,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "오이"
-  avatar           : "/assets/images/profile_image01.jpeg"
+  name             : "오잇"
+  avatar           : "/assets/images/profile_image01.jpg"
   bio              : "Learning by doing, just do it!"
   location         : "Republic of Korea"
   email            :
@@ -122,9 +122,9 @@ author:
   #  - label: "Facebook"
   #    icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "Naver Blog"
-      icon: "fab fa-fw fa-accusoft"
-       url: "https://blog.naver.com/itpger"
+  #  - label: "Naver Blog"
+  #    icon: "fas fa-fw fa-envelope-square"
+  #     url: "https://blog.naver.com/itpger"
   #  - label: "Instagram"
   #    icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -287,7 +287,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
       sidebar_main: true
