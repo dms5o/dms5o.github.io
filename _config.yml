@@ -292,9 +292,9 @@ defaults:
       related: true
       sidebar_main: true
   # _pages 
-   - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+  # - scope:
+  #    path: ""
+  #    type: pages
+  #  values:
+  #    layout: single
+  #    author_profile: true
