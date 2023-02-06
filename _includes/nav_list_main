@@ -20,7 +20,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Java" %}
-                        <li><a href="/categories/java" class="">Java 자바 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/java" class="">JAVA 자바 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
