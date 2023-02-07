@@ -50,8 +50,8 @@ classes: wide
           </aside>
         {% endif %}
         {{ content }} <!--이전 다음 버튼-->
-        <!--{% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       </section>
 
       <footer class="page__meta">
@@ -66,19 +66,8 @@ classes: wide
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %} <!--댓글-->
       {% include comments.html %}
     {% endif %}
-
-    <ul class="taxonomy__index"> <!--연도별 포스팅 글-->
-      {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-      {% for year in postsInYear %}
-        <li>
-          <a href="#{{ year.name }}">
-            <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
     
-    {% assign entries_layout = page.entries_layout | default: 'list' %}
+    {% assign entries_layout = page.entries_layout | default: 'list' %} <!--연도별 포스팅 글-->
     {% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
     {% for year in postsByYear %}
       <section id="{{ year.name }}" class="taxonomy__section">
