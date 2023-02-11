@@ -13,7 +13,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Cpp" %}
-                        <li><a href="/categories/cpp" class="">Cpp C++  ({{category[1].size}})</a></li>
+                        <li><a href="/categories/cpp" class="">CPP C++  ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
