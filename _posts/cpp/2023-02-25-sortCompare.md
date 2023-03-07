@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-## compare 함수 선언문  
+## compare 함수 정의문  
 const는 생략해도 되지만 기본으로 해주자.  
 #### Vector + Vector (2차원 벡터)  
 ```c++
@@ -58,11 +58,12 @@ int main() {
 <br>
 <br>
 
-## compare 함수 정의문 예제  
+## compare 함수 정의문 예제
 #### 오름차순 - 두 번째 원소 기준으로, 같으면 첫 번째 원소 기준으로
 *백준 11651번 참고*  
 ```c++
-bool compare(vector<int> a, vector<int> b) { //2차원 벡터
+ //2차원 벡터
+bool compare(vector<int> a, vector<int> b) {
 	if (a[1] == b[1]) // 두 번째 원소가 같으면
 		return a[0] < b[0]; //첫 번째 원소 기즌으로 오름차순
 	else
@@ -70,7 +71,8 @@ bool compare(vector<int> a, vector<int> b) { //2차원 벡터
 }
 ```
 ```c++
-bool compare(pair<int, int> a, pair<int, int> b) { //Vector + pair
+ //Vector + pair
+bool compare(pair<int, int> a, pair<int, int> b) {
 	if (a.second == b.second)
 		return a.first < b.first;
 	else
@@ -82,6 +84,7 @@ bool compare(pair<int, int> a, pair<int, int> b) { //Vector + pair
 #### 오름차순 - 첫 번째 원소 기준으로, 같으면 입력 순서대로
 *백준 10814번 참고*  
 1. stable_sort 사용
+
 ```c++
 bool compare(const pair<int, string> &a, const pair<int, string> &b) {
 	return a.first < b.first; //첫 번째 원소 기준으로 오름차순
@@ -93,7 +96,9 @@ int main() {
 	stable_sort(vec.begin(), vec.end(), compare); //stable_sort: 입력 순서 유지
 }
 ```
+
 2. 구조체 사용
+
 ```c++
 struct st {
 	int idx, age; //idx: 입력 순서 저장, age: 첫 번째 원소
