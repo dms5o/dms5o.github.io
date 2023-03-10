@@ -46,18 +46,19 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">Tool</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Git" %}
+                        <li><a href="/categories/git" class="">GIT 깃  ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">기타</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Study" %}
                         <li><a href="/categories/study" class="">STUDY 스터디 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Git" %}
-                        <li><a href="/categories/git" class="">GIT 깃  ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

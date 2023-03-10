@@ -11,7 +11,7 @@ toc_sticky: true
 
 ## compare 함수 정의문  
 const는 생략해도 되지만 기본으로 해주자.  
-#### Vector + Vector (2차원 벡터)  
+### Vector + Vector (2차원 벡터)  
 ```c++
 bool compare(const vector<int> &a, const vector<int> &b) {
 	/*함수 내용*/
@@ -25,7 +25,7 @@ int main() {
 ```
 <br>
 
-#### Vector + pair 클래스  
+### Vector + pair 클래스  
 ```c++
 bool compare(const pair<int, int> &a, const pair<int, int> &b) {
 	/*함수 내용*/
@@ -39,7 +39,7 @@ int main() {
 ```
 <br>
 
-#### Vector + struct 구조체
+### Vector + struct 구조체
 ```c++
 struct st {
 	/*변수 선언*/
@@ -54,7 +54,7 @@ int main() {
 	/*값 할당*/
 	sort(vec.begin(), vec.end(), compare);
 }
-```
+```  
 <br>
 <br>
 
@@ -96,6 +96,7 @@ int main() {
 	stable_sort(vec.begin(), vec.end(), compare); //stable_sort: 입력 순서 유지
 }
 ```
+<br>
 
 2. 구조체 사용
 
